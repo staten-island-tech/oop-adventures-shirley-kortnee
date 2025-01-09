@@ -1,30 +1,29 @@
 import os
 
-# Define maze layout
+#maze thing
 maze = [
     ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'],
     ['#', ' ', '#', ' ', ' ', ' ', '#', ' ', ' ', ' ', '#'],
     ['#', ' ', ' ', ' ', '#', '#', '#', ' ', '#', ' ', '#'],
     ['#', '#', '#', ' ', ' ', ' ', ' ', ' ', '#', ' ', '#'],
     ['#', ' ', '#', ' ', ' ', '#', '#', '#', ' ', ' ', '#'],
-    ['#', ' ', ' ', ' ', '#', ' ', ' ', '#', ' ', ' ', '#'],
-    ['#', ' ', '#', '#', '#', ' ', ' ', '#', ' ', ' ', '#'],
-    ['#', ' ', ' ', ' ', ' ', ' ', '#', '#', ' ', ' ', '#'],
+    ['#', ' ', ' ', ' ', '#', ' ', '#', ' ', ' ', ' ', '#'],
+    ['#', ' ', '#', '#', '#', ' ', '#', ' ', '#', ' ', '#'],
+    ['#', ' ', ' ', ' ', ' ', ' ', '#', ' ', ' ', '#', '#'],
     ['#', '#', '#', '#', '#', '#', '#', '#', 'E', '#', '#']
 ]
 
-# Initial player position (row, col)
 player_pos = [1, 1]
 
-# Function to print the maze
+# maze
 def print_maze():
-    os.system('cls' if os.name == 'nt' else 'clear')  # Clear screen for each update
+    os.system('cls' if os.name == 'nt' else 'clear')  
     for r in range(len(maze)):
         for c in range(len(maze[r])):
             if [r, c] == player_pos:
-                print('P', end=' ')  # Print the player icon
+                print('P', end=' ')  
             else:
-                print(maze[r][c], end=' ')  # Print the maze structure
+                print(maze[r][c], end=' ')
         print()
 
 # Function to move player
@@ -52,16 +51,16 @@ def game_loop():
         move = input("Use WASD to move (W = up, A = left, S = down, D = right, Q = quit): ").upper()
         
         if move == 'Q':
-            print("Thanks for playing!")
+            print("wow so u hate me")
             break
         elif move in ['W', 'A', 'S', 'D']:
             move_player(move)
         else:
-            print("Invalid input! Use W, A, S, D to move.")
+            input("wtf thats not wasd r u slow. do it again ")
         
         # Check if player has reached the end
         if player_pos == [8, 8]:  # End position is at (8, 8)
-            print("You reached the end of the maze!")
+            print("woah u did it")
             break
 
 # Run the game
