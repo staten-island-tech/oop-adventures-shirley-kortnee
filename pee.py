@@ -62,10 +62,25 @@ def game_loop():
         if player_pos == [8, 8]:  # End position is at (8, 8)
             print("woah u did it")
             break
+        if player_pos == [6, 4]:
+            puzzle_one()
 
-def puzzle_one()
+def puzzle_one():
     if player_pos == [6, 4]:
-        
+        print("What has hands but cannot clap?")
+        answer_one = "a clock".upper()
+        user_input = input("Your answer: ").upper()
+        if user_input == answer_one:
+            print("What has life, but can die?")
+            answer_two = "a battery".upper()
+            user_input = input("Your answer: ").upper()
+            if user_input == answer_two:
+                print("I have keys but no locks. I have space but no room. You can enter but you can't go outside. What am I?")
+                answer_three = "a keyboard".upper()
+                user_input = input("Your answer: ").upper()
+                if user_input == answer_three:
+                    print("Wow, first puzzle done!")
+ 
 
 # Run the game
 game_loop()
