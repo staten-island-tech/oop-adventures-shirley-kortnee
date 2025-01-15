@@ -16,10 +16,10 @@ class Player:
 
     def add_item(self, item, quantity=1):
         if item.name in self.inventory:
-            self.inventory[item.name].quantity += quantity
-        else:
-            self.inventory[item.name] = item
-            self.inventory[item.name].quantity = quantity
+            self.inventory.append
+        else:        
+            if item.name in self.inventory:
+                self.inventory[item.name].quantity += quantity
 
     def show_inventory(self):
         if not self.inventory:
@@ -29,7 +29,7 @@ class Player:
             for item in self.inventory.values():
                 print(f" - {item}")
 
-key = Item("key", "i can open stuff woah")
+key = Item("key", "i can open stuff woah", 1)
 
 
 #maze thing
