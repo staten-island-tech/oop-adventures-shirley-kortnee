@@ -58,7 +58,6 @@ def game_loop():
         elif move in ['W', 'A', 'S', 'D']:
             move_player(move)
             print(player_pos)
-            input("test")
         elif player_pos == [8, 8]:  
             print("woah u did it")
             print(player_pos)
